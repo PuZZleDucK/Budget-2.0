@@ -32,8 +32,7 @@ Components:
 - Rails 5
 - Get the project ```git clone http://...```
 - Install rails dependancies ```bundle install```
-* Database creation
-* Database initialization
-- Test with ````rails test````
+* Init DB with ```rails db:migrate```
+- Test with ```rails test```
 * Services (job queues, cache servers, search engines, etc.)
 * Push to repository with passing tests will result in [deployment](http://...)
