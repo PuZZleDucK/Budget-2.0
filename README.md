@@ -29,7 +29,7 @@ Components:
 
 ### Technology
 
-- Rails 5.0.2
+- Rails 5
 - Get the project ```git clone http://...```
 - Install rails dependancies ```bundle install```
 * Database creation
