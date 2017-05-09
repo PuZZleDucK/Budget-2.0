@@ -32,7 +32,9 @@ Components:
 - Rails 5
 - Get the project ```git clone http://...```
 - Install rails dependancies ```bundle install```
-* Init DB with ```rails db:migrate```
+- Init DB with ```rails db:migrate```
 - Test with ```rails test```
+- Run development with ```rails server```
+- Push to GitHub will result in deployment
 * Services (job queues, cache servers, search engines, etc.)
 * Push to repository with passing tests will result in [deployment](http://...)
