@@ -28,4 +28,16 @@ class UserTest < ActiveSupport::TestCase
     assert_not duplicate_user.valid?
   end
 
+  test "no password invalid" do
+    @normal_user.password = ""
+    @normal_user.password_confirmation = ""
+    assert_not @normal_user.valid?
+  end
+
+  test "short password invalid" do
+    @normal_user.password = "123"
+    @normal_user.password_confirmation = "123"
+    assert_not @normal_user.valid?
+  end
+
 end
