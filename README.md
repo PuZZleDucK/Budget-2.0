@@ -29,12 +29,17 @@ Components:
 
 ### Technology
 
-- Rails 5
-- Get the project ```git clone http://...```
+- Rails 5 application
+- Bootstrap layout
+- Deployment is on [Heroku](https://budget-2point0.herokuapp.com/)
+- Push to repository with passing tests will result in deployment
+- CI Pipeline is [Semaphore](https://semaphoreci.com/puzzleduck/budget-2-0)
+* Services (job queues, cache servers, search engines, etc.)
+
+### Developers
+
+- Get the project ```git clone https://github.com/PuZZleDucK/Budget-2.0.git```
 - Install rails dependancies ```bundle install```
 - Init DB with ```rails db:migrate```
 - Test with ```rails test```
 - Run development with ```rails server```
-- Push to GitHub will result in deployment
-* Services (job queues, cache servers, search engines, etc.)
-* Push to repository with passing tests will result in [deployment](http://...)
