@@ -30,6 +30,7 @@ Components:
 ### Technology
 
 - Rails 5 application
+- Ruby 2.3.1
 - Bootstrap layout
 - Deployment is on [Heroku](https://budget-2point0.herokuapp.com/)
 - Push to repository with passing tests will result in deployment
