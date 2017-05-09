@@ -6,15 +6,18 @@ normal:
   last_name: User
   email: normal@user.org
   trust: 0
+  password_digest: <%= User.digest('password') %>
 
 trusted:
   first_name: Trusted
   last_name: User
   email: trusted@user.org
   trust: 400
+  password_digest: <%= User.digest('password') %>
 
 department:
   first_name: Department
   last_name: User
   email: trusted@user.vic.gov.au
   trust: 400
+  password_digest: <%= User.digest('password') %>
