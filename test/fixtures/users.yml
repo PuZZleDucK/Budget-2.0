@@ -1,13 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  trust: 1
+normal:
+  first_name: Normal
+  last_name: User
+  email: normal@user.org
+  trust: 0
 
-two:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  trust: 1
+trusted:
+  first_name: Trusted
+  last_name: User
+  email: trusted@user.org
+  trust: 400
+
+department:
+  first_name: Department
+  last_name: User
+  email: trusted@user.vic.gov.au
+  trust: 400
