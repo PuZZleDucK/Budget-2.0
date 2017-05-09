@@ -7,6 +7,10 @@
 - richard913
 - luke2.0
 - saikumar.beera
+- davislf2
+- lukejh
+- bransell
+- annel
 
 ### Goal
 
