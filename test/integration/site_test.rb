@@ -81,4 +81,15 @@ class SiteTest < ActionDispatch::IntegrationTest
     assert_not is_logged_in?
   end
 
+  test "profile" do
+    get user_path(@normal_user)
+    assert_template 'users/show'
+    assert_select 'h1>img.gravatar'
+    assert_match @normal_user.ideas.count.to_s, response.body
+    # assert_select 'div.pagination'
+    @normal_user.ideas.paginate(page: 1).each do |idea|
+      assert_match idea.content, response.body
+    end
+  end
+
 end

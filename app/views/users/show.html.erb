@@ -9,6 +9,17 @@
       <strong><%= @user.first_name %></strong> <%= @user.last_name %>
     </h1></section>
   </aside>
+
+  <div class="col-md-8">
+    <% if @user.ideas.any? %>
+      <h3>Ideas (<%= @user.ideas.count %>)</h3>
+      <ol class="ideas">
+        <%= render @ideas %>
+      </ol>
+      <%= will_paginate @ideas %>
+    <% end %>
+  </div>
+
 </div>
 
 <p>

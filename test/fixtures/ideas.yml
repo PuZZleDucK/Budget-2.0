@@ -3,7 +3,16 @@
 least_recent:
   content: idea one
   created_at: <%= 2.hours.ago %>
+  user: normal
 
 most_recent:
   content: idea two
   created_at: <%= Time.zone.now %>
+  user: normal
+
+<% 20.times do |n| %>
+idea_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 24.hours.ago %>
+  user: normal
+<% end %>

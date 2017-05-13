@@ -11,6 +11,7 @@
 - lukejh
 - bransell
 - annel
+- Dee
 
 ### Goal
 
