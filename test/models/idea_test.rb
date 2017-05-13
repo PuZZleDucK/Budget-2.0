@@ -28,8 +28,9 @@ class IdeaTest < ActiveSupport::TestCase
   test "associated ideas destroyed" do
     @user.save
     @user.ideas.create!(content: "temp")
+    idea_count = Idea.count
     @user.destroy
-    assert_equal Idea.count, 0
+    assert_operator idea_count, :>, Idea.count
   end
 
 end

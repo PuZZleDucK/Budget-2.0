@@ -20,4 +20,12 @@ class IdeasControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to login_url
   end
 
+  test "redirect destroy for wrong idea" do
+    log_in_as(users(:normal))
+    idea = ideas(:trusted)
+    assert_no_difference 'Idea.count' do
+      delete idea_path(idea)
+    end
+  end
+
 end

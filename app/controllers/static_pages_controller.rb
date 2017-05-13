@@ -1,5 +1,10 @@
 class StaticPagesController < ApplicationController
   def home
-    @idea = current_user.ideas.build if logged_in?
+    if logged_in?
+      @idea = current_user.ideas.build
+      @feed_items = current_user.feed.paginate(page: params[:page])
+    else
+      @feed_items = []
+    end
   end
 end

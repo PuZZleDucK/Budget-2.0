@@ -7,6 +7,7 @@ class IdeasController < ApplicationController
       flash[:success] = "Your idea has been created"
       redirect_to root_url
     else
+      @feed_items = []
       render 'static_pages/home'
     end
   end

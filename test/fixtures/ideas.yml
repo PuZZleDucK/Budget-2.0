@@ -2,7 +2,7 @@
 
 least_recent:
   content: idea one
-  created_at: <%= 2.hours.ago %>
+  created_at: <%= 5.hours.ago %>
   user: normal
 
 most_recent:
@@ -16,3 +16,8 @@ idea_<%= n %>:
   created_at: <%= 24.hours.ago %>
   user: normal
 <% end %>
+
+trusted:
+  content: trusted idea
+  created_at: <%= 2.hours.ago %>
+  user: trusted

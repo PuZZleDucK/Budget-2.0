@@ -92,4 +92,23 @@ class SiteTest < ActionDispatch::IntegrationTest
     end
   end
 
+
+  test "idea creation" do
+    log_in_as(@normal_user)
+    get root_path
+    # Invalid submission
+    assert_no_difference 'Idea.count' do
+      post ideas_path, params: { idea: { content: "" } }
+    end
+    assert_select 'div#error_explanation'
+    # Valid submission
+    content = "test idea"
+    assert_difference 'Idea.count', 1 do
+      post ideas_path, params: { idea: { content: content } }
+    end
+    assert_redirected_to root_url
+    follow_redirect!
+    assert_match content, response.body
+  end
+
 end
