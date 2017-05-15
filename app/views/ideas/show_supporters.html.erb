@@ -1,15 +1,13 @@
 <div class="row">
   <div class="col-md-8">
-    <p><%= @idea.content %></p>
     <h1>People supporting "<%= @idea.content %>"</h1>
+    <p>+<%= render 'shared/support_form', user: current_user, idea: @idea %></p>
     <% if @users && @users.any? %>
       <ul class="users support">
-        <!-- <%= render @users %> -->
-
         <% @users.each do |user| %>
           <li>
             <% if not user.nil? %>
-              <%= link_to gravatar_for(user, size: 50), current_user %>
+              <%= link_to gravatar_for(user, size: 50), user %>
               <h1><%= link_to "#{user.first_name} #{user.last_name}", user %></h1>
               <span><%= pluralize(user.ideas.count, "idea") %></span>
             <% else %>
