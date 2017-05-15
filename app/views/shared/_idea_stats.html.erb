@@ -1,0 +1,17 @@
+<% if false %>
+<div class="stats">
+  <a href="<%= supporters_idea_path(@idea) %>">
+    <strong id="supporters" class="stat">
+      <%= @idea.supporters.count %>
+    </strong>
+    supporting
+  </a>
+</div>
+<% else %>
+<div class="stats">
+    <strong id="supporters" class="stat">
+      0
+    </strong>
+    supporting
+</div>
+<% end %>

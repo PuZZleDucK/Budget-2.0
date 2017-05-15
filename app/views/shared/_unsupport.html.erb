@@ -1,0 +1,5 @@
+<%= form_for(current_user.supports.find_by(user_id: current_user.id),
+             html: { method: :delete }) do |f| %>
+  <div><%= hidden_field_tag :idea_id, idea.id %></div>
+  <%= f.submit "Unsupport", class: "btn" %>
+<% end %>

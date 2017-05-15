@@ -1,7 +1,8 @@
-
 # The $ocial Budget - BudgetHack 2017
 
 ### Team
+
+The Voice of Victoria, saying it out loud
 
 - puzzleduck
 - richard913

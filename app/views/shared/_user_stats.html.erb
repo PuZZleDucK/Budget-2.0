@@ -1,0 +1,9 @@
+<% @user ||= current_user %>
+<div class="stats">
+  <a href="<%= supporting_user_path(@user) %>">
+    <strong id="supporting" class="stat">
+      <%= @user.supports.count %>
+    </strong>
+    supporting
+  </a>
+</div>

@@ -15,6 +15,12 @@ class IdeasController < ApplicationController
   def destroy
   end
 
+  def supporters
+    @idea  = Idea.find(params[:id])
+    @users = @idea.supporters.paginate(page: params[:page])
+    render 'show_supporters'
+  end
+
   private
     def idea_params
       params.require(:idea).permit(:content)

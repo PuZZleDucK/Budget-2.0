@@ -64,6 +64,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def supporting
+    @user  = User.find(params[:id])
+    @ideas = @user.supports.paginate(page: params[:page])
+    render 'show_supporting'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
