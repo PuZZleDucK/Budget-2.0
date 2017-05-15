@@ -14,6 +14,9 @@ class SupportsController < ApplicationController
   end
 
   def destroy
+    @support = Support.find(params[:id])
+    @support.destroy
+    redirect_to root_url
   end
 
   private
