@@ -1,6 +1,5 @@
-<%= form_for(current_user.supports.build) do |f| %>
-<div><%= hidden_field_tag :user_id, current_user.id %></div>
-<% puts "IDIDIDID::::: #{@idea.inspect}" %>
-<div><%= hidden_field_tag :idea_id, @idea.id %></div>
+<%= form_for(current_user.supports.build(idea_id: idea.id)) do |f| %>
+<div><%= hidden_field_tag :user_id, user.id %></div>
+<div><%= hidden_field_tag :idea_id, idea.id %></div>
   <%= f.submit "Support", class: "btn btn-primary" %>
 <% end %>

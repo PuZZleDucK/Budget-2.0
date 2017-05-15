@@ -62,34 +62,34 @@ class SiteTest < ActionDispatch::IntegrationTest
   end
 
   test "login valid" do
-    # get login_path
-    # post login_path, params: { session: { email: @normal_user.email, password: 'password' } }
-    # assert_redirected_to @normal_user
-    # follow_redirect!
-    # assert_template 'users/show'
-    # assert_select "a[href=?]", login_path, count: 0
-    # assert_select "a[href=?]", logout_path
-    # assert_select "a[href=?]", user_path(@normal_user)
-    # assert is_logged_in?
+    get login_path
+    post login_path, params: { session: { email: @normal_user.email, password: 'password' } }
+    assert_redirected_to @normal_user
+    follow_redirect!
+    assert_template 'users/show'
+    assert_select "a[href=?]", login_path, count: 0
+    assert_select "a[href=?]", logout_path
+    assert_select "a[href=?]", user_path(@normal_user)
+    assert is_logged_in?
 
-    # delete logout_path
-    # assert_redirected_to root_url
-    # follow_redirect!
-    # assert_select "a[href=?]", login_path
-    # assert_select "a[href=?]", logout_path,      count: 0
+    delete logout_path
+    assert_redirected_to root_url
+    follow_redirect!
+    assert_select "a[href=?]", login_path
+    assert_select "a[href=?]", logout_path,      count: 0
     # assert_select "a[href=?]", user_path(@normal_user), count: 0
-    # assert_not is_logged_in?
+    assert_not is_logged_in?
   end
 
   test "profile" do
     get user_path(users(:normal))
-    # assert_template 'users/show'
+    assert_template 'users/show'
     # assert_select 'h1>img.gravatar'
-    # assert_match @normal_user.ideas.count.to_s, response.body
+    assert_match @normal_user.ideas.count.to_s, response.body
     # assert_select 'div.pagination'
-    # @normal_user.ideas.paginate(page: 1).each do |idea|
-    #   assert_match idea.content, response.body
-    # end
+    @normal_user.ideas.paginate(page: 1).each do |idea|
+      assert_match idea.content, response.body
+    end
   end
 
 

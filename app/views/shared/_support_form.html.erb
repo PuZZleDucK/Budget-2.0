@@ -1,9 +1,9 @@
 <% if not current_user.nil? %>
   <div id="support_form">
   <% if current_user.supports?(@idea) %>
-    <%= render 'shared/unsupport', user: current_user, idea: idea %>
+    <%= render 'shared/unsupport', user: user, idea: idea %>
   <% else %>
-    <%= render 'shared/support', user: current_user, idea: idea %>
+    <%= render 'shared/support', user: user, idea: idea %>
   <% end %>
   </div>
 <% end %>
