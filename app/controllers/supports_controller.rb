@@ -2,21 +2,18 @@ class SupportsController < ApplicationController
 
   def create
     @support = current_user.supports.build(support_params)
-    puts "SUPP: #{@support.inspect}"
 
     if @support.save
-      flash[:success] = "Your support has been registered"
-      redirect_to root_url
+      redirect_to request.referrer
     else
-      flash[:error] = "Something went wrong"
-      redirect_to root_url
+      redirect_to request.referrer
     end
   end
 
   def destroy
     @support = Support.find(params[:id])
     @support.destroy
-    redirect_to root_url
+    redirect_to request.referrer
   end
 
   private

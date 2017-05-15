@@ -1,20 +1,16 @@
-<% @idea ||= Idea.find_by(id: session[:idea_id]) %>
-<% puts "ID:::::::#{idea}" %>
 <% if idea %>
-<p>sup: <%= idea.supports.count %> </p>
 <div class="stats">
   <%= link_to "idea", supporters_idea_path(idea.id) %>
     <strong id="supporters" class="stat">
-      <%= idea.supporters.count %> supporter(s)
+      <%= pluralize(idea.supporters.count, "supporter") %>
     </strong>
     supporting
   </a>
 </div>
 <% else %>
-<div class="stats">
+  <div class="stats">
     <strong id="supporters" class="stat">
-      auto 0 supporter(s)
+      0 supporter(s)
     </strong>
-    supporting
-</div>
+  </div>
 <% end %>
