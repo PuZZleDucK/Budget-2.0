@@ -1,9 +1,11 @@
-<% if @idea %>
-<p>sup: <%= @idea.supports.count %> </p>
+<% @idea ||= Idea.find_by(id: session[:idea_id]) %>
+<% puts "ID:::::::#{idea}" %>
+<% if idea %>
+<p>sup: <%= idea.supports.count %> </p>
 <div class="stats">
   <%= link_to "idea", supporters_idea_path(idea.id) %>
     <strong id="supporters" class="stat">
-      <%= @idea.supporters.count %> supporter(s)
+      <%= idea.supporters.count %> supporter(s)
     </strong>
     supporting
   </a>
