@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
     else
       # @feed_items = []
     end
-    @feed_items = Idea.all.paginate(page: params[:page])
+    @popular_feed_items = Idea.all
+    @recent_feed_items = Idea.all.sort
   end
 end
