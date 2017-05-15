@@ -1,8 +1,9 @@
-<% if false %>
+<% if @idea %>
+<p>sup: <%= @idea.supports.count %> </p>
 <div class="stats">
-  <a href="<%= supporters_idea_path(@idea) %>">
+  <%= link_to "idea", supporters_idea_path(idea.id) %>
     <strong id="supporters" class="stat">
-      <%= @idea.supporters.count %>
+      <%= @idea.supporters.count %> supporter(s)
     </strong>
     supporting
   </a>
@@ -10,7 +11,7 @@
 <% else %>
 <div class="stats">
     <strong id="supporters" class="stat">
-      0
+      auto 0 supporter(s)
     </strong>
     supporting
 </div>

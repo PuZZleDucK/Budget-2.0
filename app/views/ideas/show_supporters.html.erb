@@ -1,10 +1,22 @@
 <div class="row">
   <div class="col-md-8">
     <p><%= @idea.content %></p>
-    <h3>People Supporting this Idea</h3>
+    <h1>People supporting "<%= @idea.content %>"</h1>
     <% if @users && @users.any? %>
       <ul class="users support">
-        <%= render @users %>
+        <!-- <%= render @users %> -->
+
+        <% @users.each do |user| %>
+          <li>
+            <% if not user.nil? %>
+              <%= link_to gravatar_for(user, size: 50), current_user %>
+              <h1><%= link_to "#{user.first_name} #{user.last_name}", user %></h1>
+              <span><%= pluralize(user.ideas.count, "idea") %></span>
+            <% else %>
+              <p>nil user</p>
+            <% end %>
+          </li>
+        <% end %>
       </ul>
     <% end %>
   </div>

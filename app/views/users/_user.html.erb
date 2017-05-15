@@ -1,6 +1,9 @@
-<% if not current_user.nil? %>
-  <%= link_to gravatar_for(current_user, size: 50), current_user %>
-  <h1><%= current_user.first_name %></h1>
-  <span><%= link_to "My profile", current_user %></span>
-  <span><%= pluralize(current_user.ideas.count, "idea") %></span>
+<p>user partial</p>
+<% if not @user.nil? %>
+  <%= link_to gravatar_for(@user, size: 50), current_user %>
+  <h1><%= @user.first_name %></h1>
+  <span><%= link_to "#{@user.first_name}", @user %></span>
+  <span><%= pluralize(@user.ideas.count, "idea") %></span>
+<% else %>
+  <p>nil user</p>
 <% end %>

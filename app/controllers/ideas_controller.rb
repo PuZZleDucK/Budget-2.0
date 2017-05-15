@@ -17,7 +17,7 @@ class IdeasController < ApplicationController
 
   def supporters
     @idea  = Idea.find(params[:id])
-    @users = @idea.supporters.paginate(page: params[:page])
+    @users = @idea.supporters
     render 'show_supporters'
   end
 
