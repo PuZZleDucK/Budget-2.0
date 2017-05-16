@@ -22,12 +22,36 @@ users = User.create!([
   {first_name: "Saikumar", last_name: "Beerà", email: "saikumar.beera@gmail.com", password: "123456"},
   {first_name: "Robert", last_name: "Fordyce", email: "robert.fordyce@unimelb.edu.au", password: "123456"}
 ])
-bill = users[0]
-ben = users[1]
+davis = users[0]
+luke = users[1]
+dinda = users[2]
+ben = users[3]
+
 Idea.destroy_all
 ideas = ben.ideas.create!([
   {content: "bens idea"}
-  ])
-first_idea = ideas[0]
+])
+ideas += dinda.ideas.create!([
+  {content: "dindas idea"}
+])
+ideas += luke.ideas.create!([
+  {content: "lukes idea"}
+])
+ideas += davis.ideas.create!([
+  {content: "davis's idea"}
+])
+
+ben_idea = ideas[0]
+dinda_idea = ideas[1]
+luke_idea = ideas[2]
+davis_idea = ideas[3]
+
 Support.destroy_all
-bill_supports_first = bill.supports.create!(idea: first_idea)
+ben.supports.build(idea: luke_idea)
+ben.supports.build(idea: davis_idea)
+ben.supports.build(idea: ben_idea)
+
+ben.supports.build(idea: dinda_idea)
+luke.supports.build(idea: dinda_idea)
+dinda.supports.build(idea: dinda_idea)
+davis.supports.build(idea: dinda_idea)

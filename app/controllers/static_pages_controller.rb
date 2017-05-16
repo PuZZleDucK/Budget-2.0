@@ -2,11 +2,8 @@ class StaticPagesController < ApplicationController
   def home
     if logged_in?
       @idea = current_user.ideas.build
-      # @feed_items = current_user.feed.paginate(page: params[:page])
-    else
-      # @feed_items = []
     end
-    @popular_feed_items = Idea.all
-    @recent_feed_items = Idea.all.sort
+    @popular_feed_items = Idea.all.all.sort {|a,b| b.supporters.count <=> a.supporters.count}
+    @recent_feed_items = Idea.all.order(:created_at)
   end
 end
