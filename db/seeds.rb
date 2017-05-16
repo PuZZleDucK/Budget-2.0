@@ -12,8 +12,15 @@
 #   ])
 User.destroy_all
 users = User.create!([
-  {first_name: "Bill", last_name: "Minerds", email: "bill@gmail.com", password: "123456"},
-  {first_name: "Ben", last_name: "Minerds", email: "puzzleduck@gmail.com", password: "123456"}
+  {first_name: "Davis", last_name: "Hong", email: "davislf2.net@gmail.com", password: "123456"},
+  {first_name: "Luke", last_name: "McDonald", email: "mcdonaldluke6@gmail.com", password: "123456"},
+  {first_name: "Dinda", last_name: "P", email: "dinda.pradi@gmail.com", password: "123456"},
+  {first_name: "Ben", last_name: "Minerds", email: "puzzleduck@gmail.com", password: "123456"},
+  {first_name: "Anne", last_name: "Laing", email: "annelaing@hotmail.com", password: "123456"},
+  {first_name: "Brendan", last_name: "Ansell", email: "ansellbr@gmail.com", password: "123456"},
+  {first_name: "Chris", last_name: "Marmo", email: "chris@papergiant.net", password: "123456"},
+  {first_name: "Saikumar", last_name: "Beerà", email: "saikumar.beera@gmail.com", password: "123456"},
+  {first_name: "Robert", last_name: "Fordyce", email: "robert.fordyce@unimelb.edu.au", password: "123456"}
 ])
 bill = users[0]
 ben = users[1]
