@@ -19,15 +19,17 @@ Follow the vTaiwain model: 1. poll the population, 2. broadcast issue 3. public 
 
 Build a system where citizens can "share ideas", "make proposals", "summarize points of view", "put forward positions", "engage in conversations", "vote on outcomes" and refine other citizens ideas and so forth
 
-Components:
+Components completed:
 - users [x]
-- topics [ ] education p.o.c.
+- topics [x] education p.o.c.
 - ideas [x]
 - support [x]
+- outcomes [x] - top ranking
+
+Nice to do someday:
 - replies [ ]
 - edits [ ]
 - moderation [ ]
-- outcomes [x] - top ranking
 
 ### Technology
 
