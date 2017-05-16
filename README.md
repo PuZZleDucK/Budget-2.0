@@ -1,17 +1,30 @@
 # The $ocial Budget - BudgetHack 2017
 
-### Team
+### Team: 4Voices
 
-The Voice of Victoria, saying it out loud
+4Voices, saying it out loud
 
-- puzzleduck
-- luke2.0
-- davislf2
-- Dee
+- PuZZleDucK
+- Luke 2.0
+- Davis lf2
+- Dinda P
+
+
+### Project Description
+
+1. An online education community - building better insights from citizens about what they needs and wants so the government can channel through the education budget for these real voices
+2. A transparent, user friendly online community which helps the goverment glean specific insights of the wants and needs of the educators and tailor the education budget to suit (hopefully)
+3. A transparent and democratic online community which helps the government glean specific insights of the wants and needs of the educators, and improve the education budget planning
+
 
 ### Goal
 
 Public Input on Funding Allocation for a Budget 2.0
+
+Vision: A transparent and democratic online community which helps the government glean specific insights of the wants and needs of the educators to improve the education budget planning
+
+Mission: Provide online facility for citizens to have their freedom of speech in raising important concerns. Connecting one voice to the other to create a community through an online space, encouraging individuals to have their voice count
+
 
 ### Possibilities
 
@@ -31,6 +44,7 @@ Nice to do someday:
 - edits [ ]
 - moderation [ ]
 
+
 ### Technology
 
 - Rails 5 application
@@ -39,6 +53,7 @@ Nice to do someday:
 - Deployment is on [Heroku](https://budget-2point0.herokuapp.com/)
 - Push to repository with passing tests will result in deployment
 - CI Pipeline is [Semaphore](https://semaphoreci.com/puzzleduck/budget-2-0)
+
 
 ### Developers
 

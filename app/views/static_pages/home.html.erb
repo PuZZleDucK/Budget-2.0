@@ -1,11 +1,48 @@
+
 <div class="center jumbotron">
-  <h1>Welcome to Budget 2.0</h1>
+  <h5>Freedom of speech is NOT a licence to abuse, it is a <strong>RESPONSIBILITY</strong> we all share. Every voice can help the government to better prioritise the education budget in 2018, so do your part and make your voice heard.</h5>
+</div>
 
-  <h2>Created for BudgetHack 2017</h2>
+<div class="center jumbotron">
+  <div class="col-md-12">
+    <div class="col-md-4">
+      <h6>Most Talked About</h6>
+    </div>
+    <div class="col-md-4">
+      <h6>Total Issues</h6>
+    </div>
+    <div class="col-md-4">
+      <h6>Community</h6>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="col-md-4">
+      <h4>Teaching Facilities</h4>
+    </div>
+    <div class="col-md-4">
+      <h4><%= @popular_feed_items.count %></h4>
+    </div>
+    <div class="col-md-4">
+      <h4><%= @user_count %></h4>
+    </div>
+  </div>
 
+  <div class="col-md-12">
+    <h3>Top election issues for Victorian voices:</h3>
+    <h5>Victorians keep adding your voice. If you are persistant you will get it. If you are persistant you will keep it.</h5>
+    <%= render 'shared/popular_feed' %>
+  </div>
 
   <div class="row">
-    <aside class="col-md-3">
+    <div class="col-md-8">
+      <h3>Add your voice and make a difference:</h3>
+      <h5>New issues and discussions happening now.</h5>
+      <%= render 'shared/recent_feed' %>
+    </div>
+
+    <div class="col-md-4">
+      <h3>Raise your voice and let us know about an issue:</h3>
+      <h5>Tell the community about your idea and allow others to add their voice to your message.</h5>
       <section class="user_info">
         <% if logged_in? %>
           <%= render 'shared/user_info' %>
@@ -16,16 +53,8 @@
           <%= link_to "Add your voice", signup_path, class: "btn btn-lg btn-primary" %>
         <% end %>
       </section>
-    </aside>
-  <div class="col-md-6">
-    <h3>Popular Ideas</h3>
-    <%= render 'shared/popular_feed' %>
+    </div>
   </div>
-  <div class="col-md-3">
-    <h3>Recent Ideas</h3>
-    <%= render 'shared/recent_feed' %>
-  </div>
-</div>
 
 
 
