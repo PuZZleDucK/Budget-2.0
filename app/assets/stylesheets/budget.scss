@@ -1,8 +1,25 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-  padding-top: 60px;
+$gray-medium-light: #eaeaea;
+$dark-background: #222;
+
+body {min-height: 150vh} /* added to be able to scroll */
+
+.countdown {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  align: center;
+}
+
+.nav {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  background-color: $dark-background;
 }
 
 section {
@@ -18,6 +35,10 @@ textarea {
   padding: 5px;
 }
 
+.main {
+  background-color: $dark-background;
+  width: 100%;
+}
 .center {
   text-align: center;
 }
@@ -59,11 +80,12 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 3.7em;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
+  padding-bottom: 9px;
   font-weight: bold;
 }
 
@@ -89,11 +111,10 @@ footer a:hover {
 }
 
 footer small {
-  float: left;
+  float: right;
 }
 
 footer ul {
-  float: right;
   list-style: none;
 }
 
@@ -101,8 +122,6 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
-
-$gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;

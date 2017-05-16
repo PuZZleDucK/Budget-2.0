@@ -8,25 +8,31 @@
   </head>
   <body>
 
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
+    <header class="nav navbar navbar-static-top navbar-inverse" role="navigation">
+      <div class="container-fluid">
         <%= link_to "Budget 2.0: The Voice of Victoria", root_path, id: "logo" %>
         <nav>
-          <table class="pull-right">
+          <table class="pull-right countdown">
             <tr>
               <td>
-                <h4>11</h4>
+                <h6>11</h6>
               </td>
               <td>
-                <h4>16</h4>
+                <h6>16</h6>
+              </td>
+              <td>
+                <h6>13</h6>
               </td>
             </tr>
             <tr>
               <td>
-                <h5>Months</h5>
+                <h7>Months</h7>
               </td>
               <td>
-                <h5>Days</h5>
+                <h7>Days</h7>
+              </td>
+              <td>
+                <h7>Hours</h7>
               </td>
             </tr>
           </div>
@@ -54,19 +60,18 @@
         </nav>
       </div>
 
-    <div class="container">
-      <%= yield %>
-    </div>
+      <div class="center jumbotron">
+        <h5>Freedom of speech is NOT a licence to abuse, it is a <strong>RESPONSIBILITY</strong> we all share. Every voice can help the government to better prioritise the education budget in 2018, so do your part and make your voice heard.</h5>
+      </div>
+
+    </header>
+
+    <%= yield %>
 
     <footer class="footer">
       <small>
-        © 4Voices 2017 - Ben Minerds - Luke McDonald - Davis Hong - Dinda	Pradi - #BudgetHack2017
+        <%= link_to "© 4Voices 2017 - Ben Minerds - Luke McDonald - Davis Hong - Dinda	Pradi - #BudgetHack2017", root_path %>
       </small>
-      <nav>
-        <ul>
-          <li><%= link_to "Home", root_path %></li>
-        </ul>
-      </nav>
     </footer>
   </body>
 </html>
