@@ -1,9 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-
-
 <div class="row">
-  <aside class="col-md-4">
+  <aside class="col-md-4 jumbotron">
     <section class="user_info">
       <%= render 'shared/user_info' %>
     </section>
@@ -11,29 +9,25 @@
     <section class="stats">
       <%= render 'shared/user_stats' %>
     </section>
+
+    <section class="idea_form">
+      <h3>Share your voice:</h3>
+      <% if logged_in? %>
+        <%= render 'shared/idea_form' %>
+      <% else %>
+        <%= link_to "Add your voice", signup_path, class: "btn btn-lg btn-primary" %>
+      <% end %>
+    </section>
+
   </aside>
 
-  <div class="col-md-8">
+  <div class="col-md-7 jumbotron">
     <% if @user.ideas.any? %>
-      <h3>Ideas (<%= @user.ideas.count %>)</h3>
+      <h3><%= pluralize(@user.ideas.count, "idea") %></h3>
       <ol class="ideas">
         <%= render @ideas %>
       </ol>
-      <%= will_paginate @ideas %>
     <% end %>
   </div>
 
 </div>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Trust:</strong>
-  <%= @user.trust %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

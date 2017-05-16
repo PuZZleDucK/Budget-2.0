@@ -1,9 +1,6 @@
 <% @user ||= current_user %>
 <div class="stats">
   <a href="<%= supporting_user_path(@user) %>">
-    <strong id="supporting" class="stat">
-      <%= @user.supports.count %>
-    </strong>
-    supporting
+      <span><%= pluralize(@user.supports.count, "support") %></span>
   </a>
 </div>

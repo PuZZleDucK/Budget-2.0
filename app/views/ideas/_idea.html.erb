@@ -1,13 +1,8 @@
 <li id="idea-<%= idea.id %>">
-  <%= link_to "idea", supporters_idea_path(idea.id) %>
   <%= link_to gravatar_for(idea.user, size: 50), idea.user %>
-  <span class="user"><%= link_to idea.user.first_name, idea.user %></span>
-  <span class="content"><%= idea.content %></span>
-  <section class="stats">
-    <%= render 'shared/idea_stats', idea: idea %>
-  </section>
+  <h5 class="content">"<%= idea.content %>"</h5>
+  <div><%= render 'shared/idea_stats', idea: idea %></div>
+  <div class="right">Created by: <%= link_to "#{idea.user.first_name} #{idea.user.last_name}", idea.user %></div>
+  <div class="right">Posted <%= time_ago_in_words(idea.created_at) %> ago</div>
   <%= render 'shared/support_form', user: current_user, idea: idea %>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(idea.created_at) %> ago.
-  </span>
 </li>

@@ -11,7 +11,10 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-    @ideas = @user.ideas.paginate(page: params[:page])
+    @ideas = @user.ideas
+    if logged_in?
+      @idea = current_user.ideas.build
+    end
   end
 
   # GET /users/new

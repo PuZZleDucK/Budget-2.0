@@ -1,15 +1,5 @@
 <% if idea %>
-<div class="stats">
-  <%= link_to "idea", supporters_idea_path(idea.id) %>
-    <strong id="supporters" class="stat">
-      <%= pluralize(idea.supporters.count, "supporter") %>
-    </strong>
-  </a>
-</div>
+    <%= link_to pluralize(idea.supporters.count, "supporter"), supporters_idea_path(idea.id) %>
 <% else %>
-  <div class="stats">
-    <strong id="supporters" class="stat">
-      0 supporter(s)
-    </strong>
-  </div>
+      0 supporters
 <% end %>
