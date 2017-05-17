@@ -42,10 +42,10 @@ davis_idea = ideas[3]
 
 Support.destroy_all
 ben.supports.create!(idea_id: luke_idea.id)
-ben.supports.build(idea_id: davis_idea.id)
-ben.supports.build(idea_id: ben_idea.id)
+ben.supports.create!(idea_id: davis_idea.id)
+ben.supports.create!(idea_id: ben_idea.id)
 
-ben.supports.build(idea_id: dinda_idea.id)
-luke.supports.build(idea_id: dinda_idea.id)
-dinda.supports.build(idea_id: dinda_idea.id)
-davis.supports.build(idea_id: dinda_idea.id)
+ben.supports.create!(idea_id: dinda_idea.id)
+luke.supports.create!(idea_id: dinda_idea.id)
+dinda.supports.create!(idea_id: dinda_idea.id)
+davis.supports.create!(idea_id: dinda_idea.id)
