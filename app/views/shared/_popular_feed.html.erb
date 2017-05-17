@@ -1,5 +1,7 @@
 <% if @popular_feed_items.any? %>
-  <ol class="ideas">
-    <%= render @top_feed_items %>
-  </ol>
+  <% @top_feed_items.each do |item| %>
+    <div class="col-sm-4">
+      <%= render item %>
+    </div>
+  <% end %>
 <% end %>

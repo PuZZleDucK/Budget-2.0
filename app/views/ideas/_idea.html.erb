@@ -1,8 +1,6 @@
-<li id="idea-<%= idea.id %>">
-  <%= link_to gravatar_for(idea.user, size: 50), idea.user %>
-  <h5 class="content">"<%= idea.content %>"</h5>
-  <div><%= render 'shared/idea_stats', idea: idea %></div>
-  <div class="right">Created by: <%= link_to "#{idea.user.first_name} #{idea.user.last_name}", idea.user %></div>
-  <div class="right">Posted <%= time_ago_in_words(idea.created_at) %> ago</div>
-  <%= render 'shared/support_form', user: current_user, idea: idea %>
-</li>
+<%= link_to gravatar_for(idea.user, size: 50), idea.user %>
+<h5 class="content">"<%= idea.content %>"</h5>
+<div><%= render 'shared/idea_stats', idea: idea %></div>
+<div class="right">Created by: <%= link_to "#{idea.user.first_name} #{idea.user.last_name}", idea.user %></div>
+<div class="right">Posted <%= time_ago_in_words(idea.created_at) %> ago</div>
+<%= render 'shared/support_form', user: current_user, idea: idea %>
