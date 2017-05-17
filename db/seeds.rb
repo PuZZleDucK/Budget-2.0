@@ -41,11 +41,11 @@ luke_idea = ideas[2]
 davis_idea = ideas[3]
 
 Support.destroy_all
-ben.supports.build(idea_id: luke_idea_id)
-ben.supports.build(idea_id: davis_idea_id)
-ben.supports.build(idea_id: ben_idea_id)
+ben.supports.build(idea_id: luke_idea.id)
+ben.supports.build(idea_id: davis_idea.id)
+ben.supports.build(idea_id: ben_idea.id)
 
-ben.supports.build(idea_id: dinda_idea_id)
-luke.supports.build(idea_id: dinda_idea_id)
-dinda.supports.build(idea_id: dinda_idea_id)
-davis.supports.build(idea_id: dinda_idea_id)
+ben.supports.build(idea_id: dinda_idea.id)
+luke.supports.build(idea_id: dinda_idea.id)
+dinda.supports.build(idea_id: dinda_idea.id)
+davis.supports.build(idea_id: dinda_idea.id)
