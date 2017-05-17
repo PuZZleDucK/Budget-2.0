@@ -41,7 +41,7 @@ luke_idea = ideas[2]
 davis_idea = ideas[3]
 
 Support.destroy_all
-ben.supports.build(idea_id: luke_idea.id)
+ben.supports.create!(idea_id: luke_idea.id)
 ben.supports.build(idea_id: davis_idea.id)
 ben.supports.build(idea_id: ben_idea.id)
 
