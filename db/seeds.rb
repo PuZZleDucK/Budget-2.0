@@ -23,28 +23,28 @@ ben = users[3]
 
 Idea.destroy_all
 ideas = ben.ideas.create!([
-  {content: "bens idea1"},
-  {content: "bens idea2"},
-  {content: "bens idea3"},
-  {content: "bens idea4"}
+  {content: "The budget mentions 'upgrading a record number of Victorian schools'. Which schools are being upgraded? What kind of upgrades?"},
+  {content: "Are any new primary schools being planned in the outer western suburbs?"},
+  {content: "Are there circumstances in which a family might be worse off in the current budget?"},
+  {content: "How will the 'Excellence in Teacher Education reforms' raise the quality of teacher education and training"}
 ])
 ideas += dinda.ideas.create!([
-  {content: "dindas idea1"},
-  {content: "dindas idea2"},
-  {content: "dindas idea3"},
-  {content: "dindas idea4"}
+  {content: "$685 million investment breakdown graph link: http::/www.understanding-the-budget.org"},
+  {content: "What does 'modernising schools' actualy mean?"},
+  {content: "The minister mentions finding 'best and brightest teachers', how does the budget address the issue of finding the best talent to teach our children"},
+  {content: "I like the idea of pairing graduates with more experienced teachers... Could we use this model elsewhere?"}
 ])
 ideas += luke.ideas.create!([
-  {content: "lukes idea1"},
-  {content: "lukes idea2"},
-  {content: "lukes idea3"},
-  {content: "lukes idea4"}
+  {content: "The 2017 budget mentions building and expanding a further 13 schools. Which schools are being upgraded?"},
+  {content: "Does all of the $44.4 million funding for special schoolscome from the education budget?"},
+  {content: "How will the 'Turnaround Teams' help underperforming schools. What will be the metrics of success in a program?"},
+  {content: "Where can I find out more about the 'Professional Learning Communities'"}
 ])
 ideas += davis.ideas.create!([
-  {content: "davis's idea1"},
-  {content: "davis's idea2"},
-  {content: "davis's idea3"},
-  {content: "davis's idea4"}
+  {content: "What new schools will be completed in 2018?"},
+  {content: "How does the government expect to save money with relocatable classrooms?"},
+  {content: "Will 25 teachers be enough for 'Specialist Teaching Teams' to cover the country"},
+  {content: "Could moving teachers around acualy reduce quality of teaching"}
 ])
 
 ben_idea = ideas[0]
