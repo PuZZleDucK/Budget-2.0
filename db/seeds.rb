@@ -14,7 +14,7 @@ users = User.create!([
   {first_name: "Robert", last_name: "Fordyce", email: "robert.fordyce@unimelb.edu.au", password: "123456"}
 ])
 99.times do
-  users += User.create!({first_name: Faker::Name.name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: "123456"})
+  users << User.create!({first_name: Faker::Name.name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: "123456"})
 end
 davis = users[0]
 luke = users[1]
