@@ -1,5 +1,5 @@
 <%= form_for(current_user.supports.build(idea_id: idea.id)) do |f| %>
 <div><%= hidden_field_tag :user_id, user.id %></div>
 <div><%= hidden_field_tag :idea_id, idea.id %></div>
-  <%= f.submit "Support", class: "btn btn-primary" %>
+  <%= f.submit "Add my Voice", class: "btn btn-primary" %>
 <% end %>
