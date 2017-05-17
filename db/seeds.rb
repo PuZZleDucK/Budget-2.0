@@ -23,29 +23,42 @@ ben = users[3]
 
 Idea.destroy_all
 ideas = ben.ideas.create!([
-  {content: "bens idea"}
+  {content: "bens idea1"},
+  {content: "bens idea2"},
+  {content: "bens idea3"},
+  {content: "bens idea4"}
 ])
 ideas += dinda.ideas.create!([
-  {content: "dindas idea"}
+  {content: "dindas idea1"},
+  {content: "dindas idea2"},
+  {content: "dindas idea3"},
+  {content: "dindas idea4"}
 ])
 ideas += luke.ideas.create!([
-  {content: "lukes idea"}
+  {content: "lukes idea1"},
+  {content: "lukes idea2"},
+  {content: "lukes idea3"},
+  {content: "lukes idea4"}
 ])
 ideas += davis.ideas.create!([
-  {content: "davis's idea"}
+  {content: "davis's idea1"},
+  {content: "davis's idea2"},
+  {content: "davis's idea3"},
+  {content: "davis's idea4"}
 ])
 
 ben_idea = ideas[0]
-dinda_idea = ideas[1]
-luke_idea = ideas[2]
-davis_idea = ideas[3]
+dinda_idea = ideas[5]
+luke_idea = ideas[9]
+davis_idea = ideas[13]
 
 Support.destroy_all
-ben.supports.create!(idea_id: luke_idea.id)
-ben.supports.create!(idea_id: davis_idea.id)
-ben.supports.create!(idea_id: ben_idea.id)
-
-ben.supports.create!(idea_id: dinda_idea.id)
+ben.supports.create!([
+  {idea_id: luke_idea.id},
+  {idea_id: davis_idea.id},
+  {idea_id: ben_idea.id},
+  {idea_id: dinda_idea.id}
+])
 luke.supports.create!(idea_id: dinda_idea.id)
 dinda.supports.create!(idea_id: dinda_idea.id)
 davis.supports.create!(idea_id: dinda_idea.id)
